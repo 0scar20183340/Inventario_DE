@@ -83,32 +83,7 @@ export default class Inventario {
  
   }
 
-  insertar(posicion, producto) {
-    let aux = this.first;
-
-    if (aux == null) {
-        return false;
-    } else {
-        if (posicion == 0) {
-            producto.next = aux;
-            this.first = producto;
-            return true;
-        } else {
-            let i = 0;
-            while (aux.next != null) {
-                if (i == posicion - 1) {
-                    producto.next = aux.next;
-                    aux.next = producto;
-                    return true;
-                } else {
-                    aux = aux.next;
-                    i++;
-                }
-            }
-        }
-    }
-    return false;
-}
+ 
 
 
 objetoTexto(producto ={}){
