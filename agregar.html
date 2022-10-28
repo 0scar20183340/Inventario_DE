@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> AGREGAR PRODUCTO AL INVENTARIO </title>
+  <link rel="stylesheet" href="agregar.css">
+</head>
+
+<body>
+  <div id="menu">
+    <div id="menuAgregar">
+      <div class="container-fluid p-3 bg-primary text-white text-center">
+        <h1>AGREGAR PRODUCTO</h1>
+      </div>
+
+      <div class="d-flex justify-content-center px-5 py-4 tab-content">
+        <div id="fAdd" class="text-center">
+          <p><input type="text" class="text-center form-control" placeholder="Codigo: " id="codigo"> </p>
+          <p><input type="text" class="text-center form-control" placeholder="Nombre del Producto: " id="nombre"> </p>
+          <p><input type="number" class="text-center form-control" placeholder="Cantidad: " id="cantidad"> </p>
+          <p><input type="number" class="text-center form-control" placeholder="Costo: $ " id="costo"> </p>
+          <input id="bAdd" type="button" class="btn btn-outline-primary" name="agregar" value="Agregar Producto">
+          <input id="bClean" type="button" class="btn btn-outline-primary" name="limpiar" value="Limpiar">
+        </div>
+      </div>
+
+      <div class="row movimientos">
+        <div class="col-4"></div>
+        <div class="col-4 movimentos">
+          <h1>Movimientos</h1>
+          <div id="movimientos">
+            <div class="row">
+              <div class="col-3">Movimiento</div>
+              <div class="col-2">Codigo</div>
+              <div class="col-2">Nombre</div>
+              <div class="col-2">Cantidad</div>
+              <div class="col-2">Costo</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4"></div>
+      </div>
+    </div>
+    <div id="menuEliminar">
+      <div class="container-fluid p-3 bg-primary text-white text-center">
+        <h1>ELIMINAR PRODUCTO</h1>
+      </div>
+
+      <div class="d-flex justify-content-center px-5 py-4 tab-content">
+        <div id="fDel" class="text-center">
+          <p>
+            <input type="number" class="text-center form-control" placeholder="Codigo del Producto" id="inpDel">
+          </p>
+          <input id="delBtn" type="button" class="btn btn-outline-primary" name="limpiar" value="Eliminar">
+        </div>
+
+      </div>
+      <div id="message" class="row justify-content-center">
+        <div id="alerta" style="width: 300px" class="alert alert-danger">
+          Producto eliminado correctamente
+        </div>
+      </div>
+    </div>
+
+    <div id="menuBuscar">
+      <div class="container-fluid p-3 bg-primary text-white text-center">
+        <h1>BUSCAR PRODUCTO</h1>
+      </div>
+
+      <div class="d-flex justify-content-center px-5 py-4 tab-content">
+        <div id="fDel" class="text-center">
+          <p>
+            <input type="number" class="text-center form-control" placeholder="Codigo del Producto" id="inpSer">
+          </p>
+          <input id="serBtn" type="button" class="btn btn-outline-primary" name="limpiar" value="Buscar">
+        </div>
+
+      </div>
+      <div id="buscadoContent" class="row justify-content-center">
+        <div id="bus" class="col-5">
+          <div class="row">
+            <div class="col-3">Codigo</div>
+            <div class="col-3">Nombre</div>
+            <div class="col-3">Cantidad</div>
+            <div class="col-3">Costo</div>
+          </div>
+          <div class="row">
+            <div class="col-3" id="codigoB">Codigo</div>
+            <div class="col-3" id="nombreB">Nombre</div>
+            <div class="col-3" id="cantB">Cantidad</div>
+            <div class="col-3" id="costoB">Costo</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <input type="button" class="btn btn-outline-primary" style="position: fixed;bottom: 5%;left: 5%;" name="eliminar"
+    value="Agregar" id="irAgregar">
+  <input type="button" class="btn btn-outline-primary" style="position: fixed;bottom: 5%;left: 30%;" name="eliminar"
+    value="Eliminar por código" id="irEliminar">
+  <input type="button" class="btn btn-outline-primary" style="position: fixed;bottom: 5%;left: 55%;" name="eliminar"
+    value="Buscar por código" id="irBuscar">
+
+
+  <script type="module" src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</body>
+
+</html>
